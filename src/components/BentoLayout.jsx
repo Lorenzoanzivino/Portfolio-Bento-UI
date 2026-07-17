@@ -2,30 +2,39 @@ import React from "react";
 import styles from "./BentoLayout.module.css";
 import ProfileCard from "./ProfileCard";
 import ExperienceCard from "./ExperienceCard";
+import ProjectsCard from "./ProjectsCard";
+import { PORTFOLIO_CONTENT } from "../config/content";
 
 const BentoLayout = () => {
   return (
-    <main className={styles.container}>
-      {/* Riquadro Alto-Sinistra */}
-      <div className={styles.profileArea}>
-        <ProfileCard />
-      </div>
+    <div className={styles.pageWrapper}>
+      {/* Intestazione Globale con Nome e Linee laterali */}
+      <header className={styles.topHeader}>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.headerTitle}>
+            {PORTFOLIO_CONTENT.metadata.owner.toUpperCase()}
+          </h1>
+        </div>
+      </header>
 
-      {/* Riquadro Destra: Progetti (Task 6) */}
-      <div className={`${styles.placeholderCard} ${styles.projectsArea}`}>
-        Progetti / Folder UI (Task 6)
-      </div>
+      <main className={styles.container}>
+        <div className={styles.profileArea}>
+          <ProfileCard />
+        </div>
 
-      {/* Riquadro Basso-Sinistra: Esperienza e Formazione */}
-      <div className={styles.experienceArea}>
-        <ExperienceCard />
-      </div>
+        <div className={styles.projectsArea}>
+          <ProjectsCard />
+        </div>
 
-      {/* Riquadro Basso-Destra: Barra Social (Task 7) */}
-      <div className={`${styles.placeholderCard} ${styles.socialArea}`}>
-        Barra Social & CV (Task 7)
-      </div>
-    </main>
+        <div className={styles.experienceArea}>
+          <ExperienceCard />
+        </div>
+
+        <div className={`${styles.placeholderCard} ${styles.socialArea}`}>
+          Barra Social & CV (Task 7)
+        </div>
+      </main>
+    </div>
   );
 };
 

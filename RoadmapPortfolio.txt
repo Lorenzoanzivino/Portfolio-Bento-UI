@@ -54,9 +54,9 @@ Roadmap del Progetto
 
         Sviluppo del layout "pillola" (pill-shaped).
 
-        Inserimento icone vettoriali per LinkedIn ed Email.
+        Inserimento icone vettoriali per LinkedIn ed Email solo contorni dello stello colore neon
 
-        Implementazione pulsante di download del PDF per il curriculum.
+        Implementazione pulsante di download del PDF per il curriculum rettangolo colore avorio come le linee pieno e testo nero
 
     Task 8: Integrazione Effetti 3D e Polishing
 
