@@ -1,0 +1,49 @@
+:root {
+  /* Palette Colori (Stile Dark Tech High-Contrast) */
+  --bg-main: #000000;
+  --card-bg: #16161a;
+  --card-bg-accent: #ccff00; /* Verde Neon / Lime per elementi di contrasto */
+  
+  /* Testi */
+  --text-primary: #ffffff;
+  --text-secondary: #a7a7a9;
+  --text-inverse: #000000;
+
+  /* Tipografia */
+  --font-display: "Playfair Display", serif; /* Per il nome principale in alto */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif; /* Per i blocchi dell'interfaccia */
+
+  /* Effetti 3D e Profondità */
+  /* Doppia ombra: esterna nera morbida per lo stacco, interna bianca millimetrica per il bordo luce */
+  --shadow-3d-card: 
+    0 24px 48px rgba(0, 0, 0, 0.8), 
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  
+  --shadow-3d-hover: 
+    0 32px 64px rgba(0, 0, 0, 0.9), 
+    inset 0 1px 2px rgba(255, 255, 255, 0.12);
+
+  /* Geometrie Bento UI */
+  --radius-bento-card: 32px;
+  --radius-inner-card: 16px;
+  --bento-gap: 24px;
+
+  /* Transizioni */
+  --transition-cubic: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset base per integrazione variabili */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
