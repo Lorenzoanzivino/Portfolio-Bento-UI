@@ -1,0 +1,73 @@
+Roadmap del Progetto
+
+    Task 1: Inizializzazione Repository e Ambiente React
+
+        Creazione repository GitHub remoto.
+
+        Clone locale.
+
+        Inizializzazione app React (es. tramite Vite).
+
+        Pulizia del boilerplate iniziale.
+
+        Creazione della struttura delle directory: src/components, src/styles, src/config, src/assets.
+
+    Task 2: Configurazione Centralizzata (Dati e Tema)
+
+        Creazione del file globale delle variabili CSS (src/styles/theme.css) per colori, ombre 3D e breakpoint.
+
+        Creazione del file JavaScript di esportazione dati (src/config/content.js) contenente tutti i testi, link e riferimenti ai progetti.
+
+    Task 3: Layout Architetturale (Bento Grid)
+
+        Implementazione del componente contenitore principale.
+
+        Definizione del CSS Grid layout.
+
+        Impostazione vincolo 100vh su desktop senza scorrimento.
+
+        Impostazione overflow-y: auto e reset griglia per il responsive su mobile.
+
+    Task 4: Componente Profilo (Riquadro Alto-Sinistra)
+
+        Sviluppo della card base.
+
+        Inserimento immagine personale.
+
+        Sovrapposizione del badge con saluto e ruolo lavorativo.
+
+    Task 5: Componente Esperienza e Formazione (Riquadro Basso-Sinistra)
+
+        Strutturazione delle liste testuali.
+
+        Applicazione della gerarchia tipografica per separare ITS-ICT Academy e ONYX TECHNOLOGY srl.
+
+    Task 6: Componente Progetti / Folder UI (Riquadro Alto-Destra)
+
+        Realizzazione dell'interfaccia a "cartella" (angolo rientrato tramite maschere CSS o contenitori sovrapposti).
+
+        Implementazione della griglia interna per l'elenco dei progetti (Dev-Inventory-Cloud, MyTrainUp, AgendaSync).
+
+        Inserimento dei link esterni verso GitHub.
+
+    Task 7: Componente Barra Social e CV (Riquadro Basso-Destra)
+
+        Sviluppo del layout "pillola" (pill-shaped).
+
+        Inserimento icone vettoriali per LinkedIn ed Email.
+
+        Implementazione pulsante di download del PDF per il curriculum.
+
+    Task 8: Integrazione Effetti 3D e Polishing
+
+        Applicazione definitiva delle doppie ombre (esterne per profondità, interne per riflesso).
+
+        Configurazione degli stati :hover per l'interazione del mouse.
+
+        Verifica finale della fluidità e dell'adattamento responsive.
+
+    Task 9: Containerizzazione (Requisito DevOps)
+
+        Creazione del Dockerfile multi-stage (fase di build React e fase di serving con Nginx).
+
+        Creazione del file .dockerignore.
