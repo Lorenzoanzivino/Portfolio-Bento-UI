@@ -7,7 +7,7 @@ export const PORTFOLIO_CONTENT = {
     greeting: "Ciao, sono Lorenzo",
     role: "Backend & DevOps Developer",
     tagline:
-      "Studente ITS-ICT Academy e Tirocinante presso ONYX TECHNOLOGY srl. Sviluppo architetture a microservizi robuste, scalabili e soluzioni cloud-native containerizzate.",
+      "Studente ITS-ICT Academy & Tirocinante presso ONYX TECHNOLOGY srl. Sviluppo architetture a microservizi robuste, scalabili e soluzioni cloud-native containerizzate.",
   },
   education: {
     title: "Formazione",
