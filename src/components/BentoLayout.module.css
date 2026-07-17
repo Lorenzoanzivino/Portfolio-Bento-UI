@@ -51,7 +51,8 @@
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  /* MODIFICA: Le prime due righe sono più alte, la terza è più bassa. Chiude il gap! */
+  grid-template-rows: 1.1fr 1.1fr 0.8fr;
   gap: var(--bento-gap);
   
   flex-grow: 1;
@@ -87,12 +88,10 @@
   grid-row: 1 / 3;
 }
 
+/* MODIFICA: Rimosso l'allineamento forzato in basso, ora si espande nella sua (nuova) riga più bassa */
 .socialArea {
   grid-column: 2 / 5;
   grid-row: 3 / 4;
-  background-color: #000000;
-  border: 3px solid var(--accent-ivory);
-  color: var(--accent-ivory);
 }
 
 @media (max-width: 1024px) {
