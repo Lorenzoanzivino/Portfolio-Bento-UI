@@ -1,3 +1,7 @@
+import devInventoryImg from "../assets/devInventory.png";
+import myTrainUpImg from "../assets/myTrainUp.png";
+import agendaSyncImg from "../assets/agendaSync.png";
+
 export const PORTFOLIO_CONTENT = {
   metadata: {
     title: "Lorenzo Anzivino | Portfolio",
@@ -5,32 +9,25 @@ export const PORTFOLIO_CONTENT = {
   },
   hero: {
     greeting: "Ciao, sono Lorenzo",
-    role: "Backend & DevOps Developer",
+    role: "Java Backend Developer",
     tagline:
-      "Studente ITS-ICT Academy & Tirocinante presso ONYX TECHNOLOGY srl. Sviluppo architetture a microservizi robuste, scalabili e soluzioni cloud-native containerizzate.",
+      "Studente ITS-ICT Academy, tirocinante presso Onyx Technology srl. Sviluppo architetture a microservizi e soluzioni cloud-native containerizzate.",
   },
   education: {
     title: "Formazione",
     institution: "ITS-ICT Academy",
-    program: "Application Cloud Developer program",
+    program: "Application Cloud Developer",
     period: "2024 - 2026",
   },
   experience: {
     title: "Esperienza",
     company: "ONYX TECHNOLOGY srl",
-    role: "Tirocinio Backend & DevOps",
+    role: "Tirocinio Java Backend",
     period: "Aprile 2026 - Attuale",
   },
   skills: {
     title: "Stack Tecnologico",
-    backend: [
-      "Java",
-      "Spring Boot",
-      "Spring Data JPA",
-      "Hibernate",
-      "Python",
-      "Flask",
-    ],
+    backend: ["Java", "Spring Boot", "Spring Data JPA", "Python", "Flask"],
     database: ["PostgreSQL", "Oracle Database", "JDBC"],
     devops: ["Docker", "Git", "CQRS", "Design Patterns"],
     frontend: ["JavaScript", "React"],
@@ -47,22 +44,27 @@ export const PORTFOLIO_CONTENT = {
         description:
           "Sistema cloud per la gestione degli inventari basato su architettura a microservizi e container-ready.",
         repoLink: "https://github.com/Lorenzoanzivino/Dev-Inventory-Cloud",
+        theme: "neon",
+        bgImage: devInventoryImg,
       },
       {
         id: "mytrainup",
         name: "MyTrainUp",
-        tags: ["Java", "Spring Boot", "PostgreSQL"],
-        description:
-          "Applicazione backend dedicata alla strutturazione, pianificazione e gestione logica delle schede di allenamento.",
+        tags: ["Python", "Flask", "JavaScript", "React"],
+        description: "Web App per la gestione delle schede di allenamento.",
         repoLink: "https://github.com/Lorenzoanzivino/mytrainup",
+        theme: "ivory",
+        bgImage: myTrainUpImg,
       },
       {
         id: "agendasync",
         name: "AgendaSync",
-        tags: ["Java", "Spring Data JPA", "CQRS"],
+        tags: ["Java", "Spring", "CQRS", "React Native"],
         description:
-          "Servizio stateless per la sincronizzazione di appuntamenti che implementa il pattern CQRS per la separazione delle letture e scritture.",
-        repoLink: "https://github.com/Lorenzoanzivino/fyr_utente",
+          "Architettura a microservizi scalabile in un ambiente cloud-ready.",
+        repoLink: "https://github.com/Lorenzoanzivino/agenda-condivisa-backend",
+        theme: "ivory",
+        bgImage: agendaSyncImg,
       },
     ],
   },

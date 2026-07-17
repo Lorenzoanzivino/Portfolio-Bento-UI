@@ -10,10 +10,6 @@
   transition: var(--transition-cubic);
 }
 
-.cardContainer:hover {
-  box-shadow: var(--shadow-3d-hover);
-}
-
 .section {
   display: flex;
   flex-direction: column;

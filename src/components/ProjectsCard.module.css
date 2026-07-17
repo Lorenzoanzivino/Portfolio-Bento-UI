@@ -1,0 +1,216 @@
+.folderWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/* Intestazione che contiene sia il Tab (sinistra) che lo spazio vuoto (destra) */
+.folderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Allinea il link alla base del tab */
+  width: 100%;
+}
+
+/* La linguetta effettiva della cartella */
+.folderTab {
+  background-color: var(--card-bg);
+  width: 50%; /* Occupa circa metà dello spazio */
+  padding: 16px 32px 12px 24px;
+  /* Arrotonda in alto a sinistra e in alto a destra, ma piatto in basso per fondersi */
+  border-radius: var(--radius-bento-card) var(--radius-bento-card) 0 0;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -5px; /* Sovrappone di 1px al body sottostante per evitare fessure */
+}
+
+/* Curva smussata che unisce la linguetta al corpo sulla destra */
+.folderTab::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  right: -24px; /* Sporge fuori dal tab */
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border-bottom-left-radius: 24px;
+  box-shadow: -12px 0 0 0 var(--card-bg);
+}
+
+.folderTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+/* Contenitore per il link sulla destra (zona vuota) */
+.headerLinkContainer {
+  padding: 0 24px 12px 0; /* Lo distanzia dal fondo e dal margine destro */
+  z-index: 3;
+}
+
+.headerLink {
+  color: var(--card-bg-accent);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.3rem;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.headerLink:hover {
+  opacity: 0.8;
+}
+
+/* Il corpo principale della cartella */
+.folderBody {
+  background-color: var(--card-bg);
+  /* Arrotonda solo in basso e in alto a destra, l'angolo in alto a sinistra è piatto e si attacca alla linguetta */
+  border-radius: 0 var(--radius-bento-card) var(--radius-bento-card) var(--radius-bento-card);
+  flex-grow: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  height: 100%;
+}
+
+.projectItem {
+  position: relative;
+  border-radius: var(--radius-inner-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.projectItem:nth-child(1) {
+  grid-column: span 2;
+}
+
+.projectBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.projectOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.themeNeon .projectOverlay {
+  background: linear-gradient(to top, var(--card-bg-accent) 45%, rgba(204, 255, 0, 0.2) 100%);
+}
+
+.themeIvory .projectOverlay {
+  background: linear-gradient(to top, #F5F5F0 45%, rgba(245, 245, 240, 0.2) 100%);
+}
+
+.projectContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.projectName {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--bg-main);
+}
+
+.githubIcon {
+  color: var(--bg-main);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.projectDescription {
+  color: #222222;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.themeNeon .tag {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: var(--bg-main);
+}
+
+.themeIvory .tag {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: var(--bg-main);
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+  .projectItem:nth-child(1) {
+    grid-column: span 1;
+  }
+  .folderHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .folderTab {
+    width: 70%;
+  }
+  .headerLinkContainer {
+    padding: 8px 0 12px 12px;
+  }
+}
