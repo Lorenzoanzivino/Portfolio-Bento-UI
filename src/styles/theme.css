@@ -1,7 +1,7 @@
 :root {
   /* Palette Colori (Stile Dark Tech High-Contrast) */
-  --bg-main: #ffffff;
-  --card-bg: #16161a;
+  --bg-main: #000000;
+  --card-bg: #222226;
   --card-bg-accent: #ccff00; /* Verde Neon / Lime per elementi di contrasto */
   
   /* Testi */
