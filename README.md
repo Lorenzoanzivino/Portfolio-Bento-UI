@@ -1,18 +1,23 @@
-# React + Vite
+# Portfolio-Bento-UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio digitale ad alte prestazioni con layout Bento UI. Progettato in React puro con CSS Modules per esporre competenze Backend (Java, Spring Boot) e DevOps (Docker, Cloud). Architettura modulare container-ready.
 
-Currently, two official plugins are available:
+## Architettura e Divisione del Progetto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Il progetto è strutturato ad assetto aziendale e diviso nei seguenti macro-componenti e moduli:
 
-## React Compiler
+1. **Configurazione Centralizzata (`src/config/` e `src/styles/`)**
+   - `content.js`: Singola fonte di verità per testi, metriche e collegamenti.
+   - `theme.css`: Gestione centralizzata di colori, costanti geometriche ed effetti tridimensionali (box-shadow multilivello).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. **Layout Core (`src/components/`)**
+   - Contenitore Bento Grid responsivo (3 colonne desktop, 1 colonna mobile).
 
-## Expanding the ESLint configuration
+3. **Moduli Funzionali (Card)**
+   - **Profilo & Bio Card**: Presentazione e tagline del ruolo.
+   - **Esperienza & Formazione Card**: Timeline testuale (ITS-ICT Academy e ONYX TECHNOLOGY srl).
+   - **Folder UI Progetti**: Griglia interna per l'esposizione di progetti backend (Dev-Inventory-Cloud, MyTrainUp, AgendaSync) con diagrammi e snippet.
+   - **Action Bar**: Area contatti, link social (LinkedIn, GitHub) e gestione download CV in PDF.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-ciao
+4. **Infrastruttura (DevOps)**
+   - Dockerfile multi-stage per il build e il serving statico tramite Nginx.
