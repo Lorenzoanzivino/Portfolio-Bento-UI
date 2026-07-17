@@ -3,6 +3,7 @@ import styles from "./BentoLayout.module.css";
 import ProfileCard from "./ProfileCard";
 import ExperienceCard from "./ExperienceCard";
 import ProjectsCard from "./ProjectsCard";
+import SocialCard from "./SocialCard";
 import { PORTFOLIO_CONTENT } from "../config/content";
 
 const BentoLayout = () => {
@@ -30,8 +31,9 @@ const BentoLayout = () => {
           <ExperienceCard />
         </div>
 
-        <div className={`${styles.placeholderCard} ${styles.socialArea}`}>
-          Barra Social & CV (Task 7)
+        {/* Task 7: Barra Social & CV */}
+        <div className={styles.socialArea}>
+          <SocialCard />
         </div>
       </main>
     </div>
