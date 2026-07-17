@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "./BentoLayout.module.css";
+import ProfileCard from "./ProfileCard";
 
 const BentoLayout = () => {
   return (
     <main className={styles.container}>
-      <div className={`${styles.placeholderCard} ${styles.profileArea}`}>
-        Profilo (Task 4)
+      {/* Riquadro Alto-Sinistra: Componente Profilo */}
+      <div className={styles.profileArea}>
+        <ProfileCard />
       </div>
+
       <div className={`${styles.placeholderCard} ${styles.projectsArea}`}>
         Progetti / Folder UI (Task 6)
       </div>
