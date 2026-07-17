@@ -1,0 +1,73 @@
+.cardContainer {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-bento-card);
+  box-shadow: var(--shadow-3d-card);
+  padding: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: var(--transition-cubic);
+}
+
+.cardContainer:hover {
+  box-shadow: var(--shadow-3d-hover);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionTitle {
+  font-size: 0.9rem;
+  color: var(--card-bg-accent);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.role {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.period {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+.company {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+.skillsList {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.skillCategory {
+  color: var(--text-primary);
+  font-weight: 600;
+}
